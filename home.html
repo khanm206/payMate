@@ -29,12 +29,12 @@
 </head>
 
 <body class="min-h-screen max-w-md bg-base-100 mx-auto bg-base-200">
-    <header class="border-b-2 border-gray-300 bg-white">
+    <header class="border-b-2 border-gray-300 bg-white sticky top-0">
         <section class="w-11/12 mx-auto py-4 px-2 flex justify-between items-center">
             <div id="left" class="flex gap-2">
                 <img class="max-w-[60px]" src="./assets/logo.png" alt="logo">
                 <div>
-                    <h2 class="text-2xl font-semibold">£<span>4500</span></h2>
+                    <h2 class="text-2xl font-semibold">£<span id="balance">4500</span></h2>
                     <p class="text-neutral/50">Available Balance</p>
                 </div>
             </div>
@@ -93,20 +93,20 @@
                 <fieldset
                     class="fieldset bg-base-100 border-base-300 rounded-2xl min-w-[360px] border px-6 py-8 mx-auto">
 
-                    <label for="input-agent" class="label text-base text-black font-semibold">Agent Number</label>
-                    <input id="input-agent" type="text" class="input rounded-2xl bg-base-200 w-auto"
+                    <label for="cashout-agent" class="label text-base text-black font-semibold">Agent Number</label>
+                    <input id="cashout-agent" type="text" class="input rounded-2xl bg-base-200 w-auto"
                         placeholder="Enter 11 digit number" />
 
 
-                    <label for="input-amount" class="label text-base text-black font-semibold">Amount</label>
-                    <input id="input-amount" type="password" class="input rounded-2xl bg-base-200 w-auto"
+                    <label for="cashout-amount" class="label text-base text-black font-semibold">Amount</label>
+                    <input id="cashout-amount" type="number" class="input rounded-2xl bg-base-200 w-auto"
                         placeholder="Enter amount to withdraw" />
 
-                    <label for="input-pin-number" class="label text-base text-black font-semibold">Pin Number</label>
-                    <input id="input-pin-number" type="password" class="input rounded-2xl bg-base-200 w-auto"
+                    <label for="cashout-pin" class="label text-base text-black font-semibold">Pin Number</label>
+                    <input id="cashout-pin" type="password" class="input rounded-2xl bg-base-200 w-auto"
                         placeholder="Enter 4-digit pin" />
 
-                    <button id="withdraw-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Withdraw
+                    <button id="cashout-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Withdraw
                         Money</button>
                 </fieldset>
 
@@ -115,7 +115,7 @@
 
     </section>
 
-    <!-- <script src="./script.js"></script> -->
+    <script src="./cashout.js"></script>
 </body>
 
 </html>
