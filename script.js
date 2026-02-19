@@ -3,7 +3,7 @@ document.getElementById(`login-btn`).addEventListener(`click`, function () {
   const inputPin = document.getElementById(`input-pin`).value;
 
   if (inputMobile == `017102030405` && inputPin == `1234`) {
-    window.location.assign("/home.html");
+    window.location.assign("home.html");
   } else {
     alert(`Login failed`);
     return;
