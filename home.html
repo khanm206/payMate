@@ -96,8 +96,8 @@
                     class="fieldset bg-base-100 border-base-300 rounded-2xl min-w-[360px] border px-6 py-8 mx-auto">
 
                     <label for="bank" class="label text-base text-black font-semibold">Select A Bank</label>
-                    <select required id="bank" class="select appearance-none  rounded-2xl bg-base-200 w-auto">
-                        <option disabled selected hidden>Select bank</option>
+                    <select required id="addBank" class="select appearance-none  rounded-2xl bg-base-200 w-auto">
+                        <option disabled selected hidden value="">Select a bank</option>
                         <option value="barclays">Barclays</option>
                         <option value="hsbc">HSBC</option>
                         <option value="lloyds">Lloyds Bank</option>
@@ -114,8 +114,8 @@
                     </select>
 
                     <label for="accountNum" class="label text-base text-black font-semibold">Bank Account Number</label>
-                    <input id="accountNum" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" required
-                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 11-digit account number" />
+                    <input id="account-num" type="text" inputmode="numeric" maxlength="8" pattern="\d{8}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 8-digit account number" />
 
 
                     <label for="addAmount" class="label text-base text-black font-semibold">Amount to Add</label>

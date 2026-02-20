@@ -10,8 +10,14 @@ function getBalance() {
   return balance;
 }
 
-function setBalance(amount) {
+function setCashoutBalance(amount) {
   const balance = getBalance();
   const newBalance = balance - Number(amount);
+  document.getElementById(`balance`).innerText = newBalance;
+}
+
+function setCashinBalance(amount) {
+  const balance = getBalance();
+  const newBalance = balance + Number(amount);
   document.getElementById(`balance`).innerText = newBalance;
 }

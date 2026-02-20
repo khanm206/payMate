@@ -19,7 +19,7 @@ document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
   }
 
   if (pin === `1234`) {
-    setBalance(amount);
+    setCashoutBalance(amount);
     alert(`Cashout Successful!`);
     return;
   } else {
