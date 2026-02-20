@@ -41,12 +41,12 @@
         <fieldset class="fieldset bg-base-100 border-base-300 rounded-2xl min-w-[360px] border px-6 py-8 mx-auto">
 
             <label for="input-mobile" class="label text-base text-black font-semibold">Mobile Number</label>
-            <input id="input-mobile" type="text" class="input rounded-2xl bg-base-200 w-auto"
-                placeholder="Enter your number" value="017102030405" />
+            <input id="input-mobile" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" required
+                class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter your number" value="01710203040" />
 
             <label for="input-pin" class="label text-base text-black font-semibold">Pin</label>
-            <input id="input-pin" type="password" class="input rounded-2xl bg-base-200 w-auto"
-                placeholder="Enter 4-digit pin" />
+            <input id="input-pin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
+                class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
 
             <button id="login-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Login</button>
         </fieldset>

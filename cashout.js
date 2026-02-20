@@ -1,12 +1,12 @@
 document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
   const amount = getValue(`cashout-amount`);
-  if (amount === ``) {
+  if (amount === `` || amount == 0) {
     alert(`Invalid amount`);
     return;
   }
-  const balance = getText(`balance`);
+  const balance = getBalance();
 
-  if (Number(amount) > Number(balance.innerText)) {
+  if (Number(amount) > balance) {
     alert(`Insufficient balance!`);
     return;
   }
@@ -19,9 +19,7 @@ document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
   }
 
   if (pin === `1234`) {
-    const newBalance = Number(balance.innerText) - Number(amount);
-
-    balance.innerText = newBalance;
+    setBalance(amount);
     alert(`Cashout Successful!`);
     return;
   } else {
