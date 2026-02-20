@@ -13,7 +13,7 @@ document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
   const agent = getValue(`cashout-agent`);
   const pin = getValue(`cashout-pin`);
 
-  if (agent.length != 11) {
+  if (isNaN(agent) || agent.length !== 11) {
     alert(`Agent number is invalid!`);
     return;
   }
