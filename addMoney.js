@@ -13,7 +13,7 @@ document.getElementById(`addMoney-btn`).addEventListener(`click`, function () {
 
   const amount = getValue(`addAmount`);
 
-  if (amount == `` || amount == 0) {
+  if (amount == `` || amount <= 0) {
     alert(`Invalid amount`);
     return;
   }
@@ -22,7 +22,7 @@ document.getElementById(`addMoney-btn`).addEventListener(`click`, function () {
 
   if (pin == `1234`) {
     setCashinBalance(amount);
-    alert(`Money added successfully`);
+    alert(`£${amount} added successfully from ${bank}`);
     return;
   } else {
     alert(`Pin is incorrect`);

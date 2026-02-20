@@ -1,6 +1,6 @@
 document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
   const amount = getValue(`cashout-amount`);
-  if (amount === `` || amount == 0) {
+  if (amount === `` || amount <= 0) {
     alert(`Invalid amount`);
     return;
   }
@@ -20,7 +20,7 @@ document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
 
   if (pin === `1234`) {
     setCashoutBalance(amount);
-    alert(`Cashout Successful!`);
+    alert(`£${amount} cashout Successful!`);
     return;
   } else {
     alert(`Pin is incorrect!`);

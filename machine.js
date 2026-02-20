@@ -13,11 +13,11 @@ function getBalance() {
 function setCashoutBalance(amount) {
   const balance = getBalance();
   const newBalance = balance - Number(amount);
-  document.getElementById(`balance`).innerText = newBalance;
+  document.getElementById(`balance`).innerText = newBalance.toFixed(2);
 }
 
 function setCashinBalance(amount) {
   const balance = getBalance();
   const newBalance = balance + Number(amount);
-  document.getElementById(`balance`).innerText = newBalance;
+  document.getElementById(`balance`).innerText = newBalance.toFixed(2);
 }
