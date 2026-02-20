@@ -21,3 +21,16 @@ function setCashinBalance(amount) {
   const newBalance = balance + Number(amount);
   document.getElementById(`balance`).innerText = newBalance.toFixed(2);
 }
+
+function showForm(id) {
+  const addMoney = document.getElementById(`addMoney`);
+  const cashout = document.getElementById(`cashout`);
+  const transaction = document.getElementById(`transaction`);
+
+  addMoney.classList.add(`hidden`);
+  cashout.classList.add(`hidden`);
+  transaction.classList.add(`hidden`);
+
+  const showedForm = document.getElementById(id);
+  showedForm.classList.remove(`hidden`);
+}

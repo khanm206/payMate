@@ -34,7 +34,7 @@
             <div id="left" class="flex gap-2">
                 <img class="max-w-[60px]" src="./assets/logo.png" alt="logo">
                 <div>
-                    <h2 class="text-2xl font-semibold">£<span id="balance">0</span></h2>
+                    <h2 class="text-2xl font-semibold">£<span id="balance">1000.00</span></h2>
                     <p class="text-neutral/50">Available Balance</p>
                 </div>
             </div>
@@ -54,11 +54,13 @@
             </p>
             <br>
             <div class="grid grid-cols-3 gap-2 auto-rows-fr text-center">
-                <button class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
+                <button onclick="showForm(`addMoney`)"
+                    class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
                     <img src="./assets/opt-1.png" alt="">
                     <p>Add Money</p>
                 </button>
-                <button class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
+                <button onclick="showForm(`cashout`)"
+                    class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
                     <img src="./assets/opt-2.png" alt="">
                     <p>Cashout</p>
                 </button>
@@ -74,7 +76,8 @@
                     <img src="./assets/opt-5.png" alt="">
                     <p>Pay Bill</p>
                 </button>
-                <button class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
+                <button onclick="showForm(`transaction`)"
+                    class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
                     <img src="./assets/opt-6.png" alt="">
                     <p>Transaction</p>
                 </button>
@@ -84,10 +87,10 @@
 
 
     </section>
+    <br>
 
 
-
-    <section id="addMoney" class="bg-base-200">
+    <section id="addMoney" class="bg-base-200 hidden">
         <div class="w-11/12 mx-auto py-8 ">
             <h2 class="text-2xl font-bold">Add Money</h2>
             <br>
@@ -162,6 +165,17 @@
                     <button id="cashout-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Withdraw
                         Money</button>
                 </fieldset>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="transaction" class="bg-base-200 hidden">
+        <div class="w-11/12 mx-auto py-8 ">
+            <h2 class="text-2xl font-bold">Transaction</h2>
+
+            <div id="tranHistory" class="mt-5 space-y-2">
 
             </div>
         </div>
