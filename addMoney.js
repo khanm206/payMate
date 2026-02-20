@@ -28,15 +28,17 @@ document.getElementById(`addMoney-btn`).addEventListener(`click`, function () {
 
     const tranCard = document.createElement(`div`);
     tranCard.innerHTML = `
-    <div class=" bg-white p-5 rounded-2xl border border-neutral/10">
-                    <h3 class="font-medium">Money Added</h3>
-                    <ul class="text-sm font-light">
-                        <li><span class="font-medium">Amount:</span> £${amount}</li>
-                        <li><span class="font-medium">Bank:</span> ${bank}</li>
-                        <li><span class="font-medium">Account Number:</span> ${accountNum}</li>
-                        <li><span class="font-medium">Date:</span> ${new Date()}</li>
-                    </ul>
-
+                 <div class="collapse bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-1" />
+                    <div class="collapse-title font-semibold">Money Added <i class="fa-solid fa-angles-down"></i></div>
+                    <div class="collapse-content text-sm">
+                        <ul class="text-sm font-light">
+                            <li><span class="font-medium">Amount:</span> £${amount}</li>
+                            <li><span class="font-medium">Bank:</span> ${bank}</li>
+                            <li><span class="font-medium">Account Number:</span> ${accountNum}</li>
+                            <li><span class="font-medium">Date:</span> ${new Date()}</li>
+                        </ul>
+                    </div>
                 </div>
     `;
 
