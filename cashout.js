@@ -1,13 +1,17 @@
 document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
-  const amount = document.getElementById(`cashout-amount`).value;
-  const balance = document.getElementById(`balance`);
+  const amount = getValue(`cashout-amount`);
+  if (amount === ``) {
+    alert(`Invalid amount`);
+    return;
+  }
+  const balance = getText(`balance`);
 
   if (Number(amount) > Number(balance.innerText)) {
     alert(`Insufficient balance!`);
     return;
   }
-  const agent = document.getElementById(`cashout-agent`).value;
-  const pin = document.getElementById(`cashout-pin`).value;
+  const agent = getValue(`cashout-agent`);
+  const pin = getValue(`cashout-pin`);
 
   if (agent.length != 11) {
     alert(`Agent number is invalid!`);

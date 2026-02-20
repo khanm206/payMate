@@ -94,17 +94,17 @@
                     class="fieldset bg-base-100 border-base-300 rounded-2xl min-w-[360px] border px-6 py-8 mx-auto">
 
                     <label for="cashout-agent" class="label text-base text-black font-semibold">Agent Number</label>
-                    <input id="cashout-agent" type="text" class="input rounded-2xl bg-base-200 w-auto"
-                        placeholder="Enter 11 digit number" />
+                    <input id="cashout-agent" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 11 digit number" />
 
 
                     <label for="cashout-amount" class="label text-base text-black font-semibold">Amount</label>
-                    <input id="cashout-amount" type="number" class="input rounded-2xl bg-base-200 w-auto"
-                        placeholder="Enter amount to withdraw" />
+                    <input id="cashout-amount" type="number" inputmode="numeric" minlength="1" pattern="\d+" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter amount to withdraw" />
 
                     <label for="cashout-pin" class="label text-base text-black font-semibold">Pin Number</label>
-                    <input id="cashout-pin" type="password" class="input rounded-2xl bg-base-200 w-auto"
-                        placeholder="Enter 4-digit pin" />
+                    <input id="cashout-pin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
 
                     <button id="cashout-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Withdraw
                         Money</button>
@@ -115,6 +115,7 @@
 
     </section>
 
+    <script src="./machine.js"></script>
     <script src="./cashout.js"></script>
 </body>
 
