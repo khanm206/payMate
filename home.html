@@ -29,7 +29,7 @@
 </head>
 
 <body class="min-h-screen max-w-md bg-base-100 mx-auto bg-base-200">
-    <header class="border-b-2 border-gray-300 bg-white sticky top-0">
+    <header class="border-b-2 border-gray-300 bg-white sticky top-0 z-10">
         <section class="w-11/12 mx-auto py-4 px-2 flex justify-between items-center">
             <div id="left" class="flex gap-2">
                 <img class="max-w-[60px]" src="./assets/logo.png" alt="logo">
@@ -85,7 +85,60 @@
 
     </section>
 
-    <section class="bg-base-200">
+
+
+    <section id="addMoney" class="bg-base-200">
+        <div class="w-11/12 mx-auto py-8 ">
+            <h2 class="text-2xl font-bold">Add Money</h2>
+            <br>
+            <div>
+                <fieldset
+                    class="fieldset bg-base-100 border-base-300 rounded-2xl min-w-[360px] border px-6 py-8 mx-auto">
+
+                    <label for="bank" class="label text-base text-black font-semibold">Select A Bank</label>
+                    <select required id="bank" class="select appearance-none  rounded-2xl bg-base-200 w-auto">
+                        <option disabled selected hidden>Select bank</option>
+                        <option value="barclays">Barclays</option>
+                        <option value="hsbc">HSBC</option>
+                        <option value="lloyds">Lloyds Bank</option>
+                        <option value="natwest">NatWest</option>
+                        <option value="santander">Santander UK</option>
+
+                        <option value="monzo">Monzo</option>
+                        <option value="starling">Starling Bank</option>
+                        <option value="revolut">Revolut</option>
+
+                        <option value="halifax">Halifax</option>
+                        <option value="tsb">TSB</option>
+                        <option value="nationwide">Nationwide</option>
+                    </select>
+
+                    <label for="accountNum" class="label text-base text-black font-semibold">Bank Account Number</label>
+                    <input id="accountNum" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 11-digit account number" />
+
+
+                    <label for="addAmount" class="label text-base text-black font-semibold">Amount to Add</label>
+                    <input id="addAmount" type="number" inputmode="numeric" minlength="1" pattern="\d+" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Add amount to add" />
+
+                    <label for="pin" class="label text-base text-black font-semibold">Pin Number</label>
+                    <input id="addMoneyPin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
+
+                    <button id="addMoney-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Add
+                        Money</button>
+                </fieldset>
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section id="cashout" class="bg-base-200 hidden">
         <div class="w-11/12 mx-auto py-8 ">
             <h2 class="text-2xl font-bold">Cash Out</h2>
             <br>
@@ -95,7 +148,7 @@
 
                     <label for="cashout-agent" class="label text-base text-black font-semibold">Agent Number</label>
                     <input id="cashout-agent" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}" required
-                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 11 digit number" />
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 11-digit number" />
 
 
                     <label for="cashout-amount" class="label text-base text-black font-semibold">Amount</label>
@@ -117,6 +170,7 @@
 
     <script src="./machine.js"></script>
     <script src="./cashout.js"></script>
+    <script src="./addMoney.js"></script>
 </body>
 
 </html>
