@@ -64,7 +64,8 @@
                     <img src="./assets/opt-2.png" alt="">
                     <p>Cashout</p>
                 </button>
-                <button class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
+                <button onclick="showForm(`transfer`)"
+                    class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
                     <img src="./assets/opt-3.png" alt="">
                     <p>Transfer Money</p>
                 </button>
@@ -123,7 +124,7 @@
 
                     <label for="addAmount" class="label text-base text-black font-semibold">Amount to Add</label>
                     <input id="addAmount" type="number" inputmode="numeric" minlength="1" pattern="\d+" required
-                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Add amount to add" />
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter amount to add" />
 
                     <label for="pin" class="label text-base text-black font-semibold">Pin Number</label>
                     <input id="addMoneyPin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
@@ -154,7 +155,8 @@
                         class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 11-digit number" />
 
 
-                    <label for="cashout-amount" class="label text-base text-black font-semibold">Amount</label>
+                    <label for="cashout-amount" class="label text-base text-black font-semibold">Amount to
+                        Withdraw</label>
                     <input id="cashout-amount" type="number" inputmode="numeric" minlength="1" pattern="\d+" required
                         class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter amount to withdraw" />
 
@@ -171,6 +173,40 @@
 
     </section>
 
+
+    <section id="transfer" class="bg-base-200 hidden">
+        <div class="w-11/12 mx-auto py-8 ">
+            <h2 class="text-2xl font-bold">Transfer Money</h2>
+            <br>
+            <div>
+                <fieldset
+                    class="fieldset bg-base-100 border-base-300 rounded-2xl min-w-[360px] border px-6 py-8 mx-auto">
+
+                    <label for="transfer-account" class="label text-base text-black font-semibold">User Account
+                        Number</label>
+                    <input id="transfer-account" type="text" inputmode="numeric" maxlength="11" pattern="\d{11}"
+                        required class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 11-digit number" />
+
+
+                    <label for="transfer-amount" class="label text-base text-black font-semibold">Amount to
+                        Transfer</label>
+                    <input id="transfer-amount" type="number" inputmode="numeric" minlength="1" pattern="\d+" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter amount to Transfer" />
+
+                    <label for="transfer-pin" class="label text-base text-black font-semibold">Pin Number</label>
+                    <input id="transfer-pin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
+
+                    <button id="transfer-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Send
+                        Now</button>
+                </fieldset>
+
+            </div>
+        </div>
+
+    </section>
+
+
     <section id="transaction" class="bg-base-200 hidden">
         <div class="w-11/12 mx-auto py-8 ">
             <h2 class="text-2xl font-bold">Transaction</h2>
@@ -185,8 +221,10 @@
 
 
     <script src="./machine.js"></script>
-    <script src="./cashout.js"></script>
     <script src="./addMoney.js"></script>
+    <script src="./cashout.js"></script>
+    <script src="./transferMoney.js"></script>
+
 </body>
 
 </html>

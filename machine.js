@@ -25,10 +25,12 @@ function setCashinBalance(amount) {
 function showForm(id) {
   const addMoney = document.getElementById(`addMoney`);
   const cashout = document.getElementById(`cashout`);
+  const transfer = document.getElementById(`transfer`);
   const transaction = document.getElementById(`transaction`);
 
   addMoney.classList.add(`hidden`);
   cashout.classList.add(`hidden`);
+  transfer.classList.add(`hidden`);
   transaction.classList.add(`hidden`);
 
   const showedForm = document.getElementById(id);
