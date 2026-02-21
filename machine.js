@@ -41,7 +41,7 @@ function setBonusBalance(coupon) {
   document.getElementById(`balance`).innerText = newBalance.toFixed(2);
 }
 
-function showForm(id) {
+function showForm(id, clickedBtn) {
   const tips = document.getElementById(`home-tips`);
   const addMoney = document.getElementById(`addMoney`);
   const cashout = document.getElementById(`cashout`);
@@ -50,6 +50,11 @@ function showForm(id) {
   const bill = document.getElementById(`pay-bill`);
   const transaction = document.getElementById(`transaction`);
 
+  document.querySelectorAll(".btn-action").forEach((btn) => {
+    btn.classList.remove(`bg-primary`);
+    btn.querySelector("p").classList.remove(`text-base-100`);
+  });
+
   addMoney.classList.add(`hidden`);
   cashout.classList.add(`hidden`);
   transfer.classList.add(`hidden`);
@@ -57,6 +62,9 @@ function showForm(id) {
   bill.classList.add(`hidden`);
   transaction.classList.add(`hidden`);
   tips.classList.add(`hidden`);
+
+  clickedBtn.classList.add(`bg-primary`);
+  clickedBtn.querySelector("p").classList.add(`text-base-100`);
 
   const showedForm = document.getElementById(id);
   showedForm.classList.remove(`hidden`);
