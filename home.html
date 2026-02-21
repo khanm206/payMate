@@ -74,7 +74,8 @@
                     <img src="./assets/opt-4.png" alt="">
                     <p>Get Bonus</p>
                 </button>
-                <button class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
+                <button onclick="showForm(`pay-bill`)"
+                    class="btn flex-col h-full px-2 py-4 rounded-xl btn-primary btn-soft">
                     <img src="./assets/opt-5.png" alt="">
                     <p>Pay Bill</p>
                 </button>
@@ -128,11 +129,12 @@
                     <input id="addAmount" type="number" inputmode="numeric" minlength="1" pattern="\d+" required
                         class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter amount to add" />
 
-                    <label for="pin" class="label text-base text-black font-semibold">Pin Number</label>
+                    <label for="addMoneyPin" class="label text-base text-black font-semibold">Pin Number</label>
                     <input id="addMoneyPin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
                         class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
 
-                    <button id="addMoney-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Add
+                    <button id="addMoney-btn" type="button"
+                        class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Add
                         Money</button>
                 </fieldset>
             </form>
@@ -166,7 +168,8 @@
                     <input id="cashout-pin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
                         class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
 
-                    <button id="cashout-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Withdraw
+                    <button id="cashout-btn" type="button"
+                        class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Withdraw
                         Money</button>
                 </fieldset>
             </form>
@@ -198,7 +201,8 @@
                     <input id="transfer-pin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
                         class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
 
-                    <button id="transfer-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Send
+                    <button id="transfer-btn" type="button"
+                        class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Send
                         Now</button>
                 </fieldset>
             </form>
@@ -219,7 +223,8 @@
                     <input id="bonus-coupon" type="text" required class="input rounded-2xl bg-base-200 w-auto"
                         placeholder="Enter your coupon" />
 
-                    <button id="bonus-btn" class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Get
+                    <button id="bonus-btn" type="button"
+                        class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Get
                         Bonus</button>
                 </fieldset>
 
@@ -229,12 +234,63 @@
     </section>
 
 
-    <section id="transaction" class="bg-base-200 hidden">
+    <section id="pay-bill" class="bg-base-200 hidden">
+        <div class="w-11/12 mx-auto py-8 ">
+            <h2 class="text-2xl font-bold">Pay Bill</h2>
+            <br>
+
+            <form id="payBill-form">
+                <fieldset
+                    class="fieldset bg-base-100 border-base-300 rounded-2xl min-w-[360px] border px-6 py-8 mx-auto">
+
+                    <label for="addBIll" class="label text-base text-black font-semibold">Select To Pay</label>
+                    <select required id="add-biller" class="select appearance-none  rounded-2xl bg-base-200 w-auto">
+                        <option disabled selected hidden value="">Select a biller</option>
+                        <option value="TV Licence">TV Licence</option>
+                        <option value="Rent">Rent</option>
+                        <option value="Service Charge">Service Charge</option>
+                        <option value="Parking Fine">Parking Fine</option>
+                        <option value="Train Ticket">Train Ticket</option>
+
+                        <option value="Travel Card">Travel Card</option>
+                        <option value="Subscription (Netflix, Spotify, etc.)">Subscription (Netflix, Spotify, etc.)
+                        </option>
+                    </select>
+
+                    <label for="biller-account" class="label text-base text-black font-semibold">Biller Account
+                        Number</label>
+                    <input id="biller-account" type="text" inputmode="numeric" maxlength="8" pattern="\d{8}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 8-digit account number" />
+
+
+                    <label for="bill-amount" class="label text-base text-black font-semibold">Amount to Pay</label>
+                    <input id="bill-amount" type="number" inputmode="numeric" minlength="1" pattern="\d+" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter amount to pay" />
+
+                    <label for="pay-bill-pin" class="label text-base text-black font-semibold">Pin Number</label>
+                    <input id="pay-bill-pin" type="password" inputmode="numeric" maxlength="4" pattern="\d{4}" required
+                        class="input rounded-2xl bg-base-200 w-auto" placeholder="Enter 4-digit pin" />
+
+                    <button id="payBill-btn" type="button"
+                        class="btn bg-[#3B25C1] text-white mt-4 rounded-2xl text-base">Pay
+                        Now</button>
+                </fieldset>
+            </form>
+
+        </div>
+
+
+    </section>
+
+
+    <section id="transaction" class="bg-base-200">
         <div class="w-11/12 mx-auto py-8 ">
             <h2 class="text-2xl font-bold">Transaction</h2>
 
             <div id="tranHistory" class="mt-5 space-y-2">
-
+                <div class="bg-white  border border-neutral/20 rounded-2xl p-5 text-center text-xl">
+                    No transactions yet
+                </div>
             </div>
         </div>
 
@@ -247,6 +303,7 @@
     <script src="./cashout.js"></script>
     <script src="./transferMoney.js"></script>
     <script src="./getBonus.js"></script>
+    <script src="./payBill.js"></script>
 
 </body>
 

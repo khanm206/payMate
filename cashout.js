@@ -11,17 +11,18 @@ document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
     return;
   }
   const agent = getValue(`cashout-agent`);
-  const pin = getValue(`cashout-pin`);
 
   if (isNaN(agent) || agent.length !== 11) {
     alert(`Agent number is invalid!`);
     return;
   }
 
+  const pin = getValue(`cashout-pin`);
   if (pin === `1234`) {
     setCashoutBalance(amount);
     alert(`£${amount} cashout Successful!`);
     const tranHistory = document.getElementById(`tranHistory`);
+    tranHistory.innerHTML = ``;
 
     const tranCard = document.createElement(`div`);
     tranCard.innerHTML = `

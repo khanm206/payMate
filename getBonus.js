@@ -12,7 +12,7 @@ document.getElementById(`bonus-btn`).addEventListener(`click`, function () {
     return;
   }
   const tranHistory = document.getElementById(`tranHistory`);
-
+  tranHistory.innerHTML = ``;
   const tranCard = document.createElement(`div`);
   tranCard.innerHTML = `
                  <div class="collapse bg-base-100 border border-base-300">
