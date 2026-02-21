@@ -42,6 +42,7 @@ function setBonusBalance(coupon) {
 }
 
 function showForm(id) {
+  const tips = document.getElementById(`home-tips`);
   const addMoney = document.getElementById(`addMoney`);
   const cashout = document.getElementById(`cashout`);
   const transfer = document.getElementById(`transfer`);
@@ -49,7 +50,7 @@ function showForm(id) {
   const bill = document.getElementById(`pay-bill`);
   const transaction = document.getElementById(`transaction`);
 
-  const tips = document.getElementById(`home-tips`);
+  const noTranHis = document.getElementById(`noTranHistory`);
 
   addMoney.classList.add(`hidden`);
   cashout.classList.add(`hidden`);
@@ -58,6 +59,8 @@ function showForm(id) {
   bill.classList.add(`hidden`);
   transaction.classList.add(`hidden`);
   tips.classList.add(`hidden`);
+
+  noTranHis.classList.add(`hidden`);
 
   const showedForm = document.getElementById(id);
   showedForm.classList.remove(`hidden`);

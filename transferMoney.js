@@ -27,7 +27,6 @@ document.getElementById(`transfer-btn`).addEventListener(`click`, function () {
     alert(`£${amount} successfully transfered to ${userAcc}`);
 
     const tranHistory = document.getElementById(`tranHistory`);
-    tranHistory.innerHTML = ``;
 
     const tranCard = document.createElement(`div`);
     tranCard.innerHTML = `

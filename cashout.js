@@ -22,8 +22,6 @@ document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
     setCashoutBalance(amount);
     alert(`£${amount} cashout Successful!`);
     const tranHistory = document.getElementById(`tranHistory`);
-    tranHistory.innerHTML = ``;
-
     const tranCard = document.createElement(`div`);
     tranCard.innerHTML = `
                  <div class="collapse bg-base-100 border border-base-300">
