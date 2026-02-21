@@ -49,12 +49,15 @@ function showForm(id) {
   const bill = document.getElementById(`pay-bill`);
   const transaction = document.getElementById(`transaction`);
 
+  const tips = document.getElementById(`home-tips`);
+
   addMoney.classList.add(`hidden`);
   cashout.classList.add(`hidden`);
   transfer.classList.add(`hidden`);
   bonus.classList.add(`hidden`);
   bill.classList.add(`hidden`);
   transaction.classList.add(`hidden`);
+  tips.classList.add(`hidden`);
 
   const showedForm = document.getElementById(id);
   showedForm.classList.remove(`hidden`);
