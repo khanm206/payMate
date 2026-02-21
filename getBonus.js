@@ -29,4 +29,6 @@ document.getElementById(`bonus-btn`).addEventListener(`click`, function () {
     `;
 
   tranHistory.appendChild(tranCard);
+  document.getElementById(`bonus-form`).reset();
+  return;
 });

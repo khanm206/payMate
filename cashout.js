@@ -39,8 +39,11 @@ document.getElementById(`cashout-btn`).addEventListener(`click`, function () {
     `;
 
     tranHistory.appendChild(tranCard);
+
+    document.getElementById(`cashout-form`).reset();
     return;
   } else {
     alert(`Pin is incorrect!`);
+    return;
   }
 });

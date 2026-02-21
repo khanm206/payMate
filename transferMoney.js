@@ -44,8 +44,11 @@ document.getElementById(`transfer-btn`).addEventListener(`click`, function () {
     `;
 
     tranHistory.appendChild(tranCard);
+
+    document.getElementById(`transfer-form`).reset();
     return;
   } else {
     alert(`Pin is incorrect!`);
+    return;
   }
 });

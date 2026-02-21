@@ -43,6 +43,8 @@ document.getElementById(`addMoney-btn`).addEventListener(`click`, function () {
     `;
 
     tranHistory.appendChild(tranCard);
+
+    document.getElementById(`addMoney-form`).reset();
     return;
   } else {
     alert(`Pin is incorrect`);
