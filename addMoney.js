@@ -25,6 +25,8 @@ document.getElementById(`addMoney-btn`).addEventListener(`click`, function () {
     alert(`£${amount} added successfully from ${bank}`);
 
     const tranHistory = document.getElementById(`tranHistory`);
+    const noTranHis = document.getElementById(`noTranHistory`);
+    noTranHis.classList.add(`hidden`);
 
     const tranCard = document.createElement(`div`);
     tranCard.innerHTML = `

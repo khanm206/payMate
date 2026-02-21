@@ -50,8 +50,6 @@ function showForm(id) {
   const bill = document.getElementById(`pay-bill`);
   const transaction = document.getElementById(`transaction`);
 
-  const noTranHis = document.getElementById(`noTranHistory`);
-
   addMoney.classList.add(`hidden`);
   cashout.classList.add(`hidden`);
   transfer.classList.add(`hidden`);
@@ -59,8 +57,6 @@ function showForm(id) {
   bill.classList.add(`hidden`);
   transaction.classList.add(`hidden`);
   tips.classList.add(`hidden`);
-
-  noTranHis.classList.add(`hidden`);
 
   const showedForm = document.getElementById(id);
   showedForm.classList.remove(`hidden`);
