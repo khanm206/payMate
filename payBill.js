@@ -29,6 +29,8 @@ document.getElementById(`payBill-btn`).addEventListener(`click`, function () {
     alert(`£${amount} paid to ${biller} successfully`);
 
     const tranHistory = document.getElementById(`tranHistory`);
+    const noTranHis = document.getElementById(`noTranHistory`);
+    noTranHis.classList.add(`hidden`);
 
     const tranCard = document.createElement(`div`);
     tranCard.innerHTML = `

@@ -12,6 +12,8 @@ document.getElementById(`bonus-btn`).addEventListener(`click`, function () {
     return;
   }
   const tranHistory = document.getElementById(`tranHistory`);
+  const noTranHis = document.getElementById(`noTranHistory`);
+  noTranHis.classList.add(`hidden`);
 
   const tranCard = document.createElement(`div`);
   tranCard.innerHTML = `
