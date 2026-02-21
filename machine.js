@@ -63,8 +63,10 @@ function showForm(id, clickedBtn) {
   transaction.classList.add(`hidden`);
   tips.classList.add(`hidden`);
 
-  clickedBtn.classList.add(`bg-primary`);
-  clickedBtn.querySelector("p").classList.add(`text-base-100`);
+  if (clickedBtn) {
+    clickedBtn.classList.add(`bg-primary`);
+    clickedBtn.querySelector("p").classList.add(`text-base-100`);
+  }
 
   const showedForm = document.getElementById(id);
   showedForm.classList.remove(`hidden`);
