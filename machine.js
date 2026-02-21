@@ -22,15 +22,36 @@ function setCashinBalance(amount) {
   document.getElementById(`balance`).innerText = newBalance.toFixed(2);
 }
 
+function setBonusBalance(coupon) {
+  const balance = getBalance();
+  let newBalance = balance;
+  if (coupon === `mk100`) {
+    newBalance += 100;
+    alert(`£100 bonus added to your account`);
+  } else if (coupon === `mk200`) {
+    newBalance += 200;
+    alert(`£200 bonus added to your account`);
+  } else if (coupon === `mk300`) {
+    newBalance += 300;
+    alert(`£300 bonus added to your account`);
+  } else {
+    alert(`Incorrect coupon`);
+    return;
+  }
+  document.getElementById(`balance`).innerText = newBalance.toFixed(2);
+}
+
 function showForm(id) {
   const addMoney = document.getElementById(`addMoney`);
   const cashout = document.getElementById(`cashout`);
   const transfer = document.getElementById(`transfer`);
   const transaction = document.getElementById(`transaction`);
+  const bonus = document.getElementById(`getBonus`);
 
   addMoney.classList.add(`hidden`);
   cashout.classList.add(`hidden`);
   transfer.classList.add(`hidden`);
+  bonus.classList.add(`hidden`);
   transaction.classList.add(`hidden`);
 
   const showedForm = document.getElementById(id);
